@@ -1,0 +1,137 @@
+//FONT
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700');
+@import url('http://fonts.googleapis.com/css?family=Roboto:400italic,300,300italic,400');
+
+//COLORS
+@colorsp1: #BA5CAC; //COLOR VIOLETA SUAVE
+@colorsp2: #943F88; //COLOR VIOLETA
+@colorsp3: #452B46; //COLOR VIOLETA FUERTE
+
+@colorsp4: #959AAA; //COLOR VIOLETA-GRIS CLARO
+@colorsp5: #6A7185; //COLOR VIOLETA-GRIS 
+@colorsp6: #58617C; //COLOR VIOLETA-GRIS FUERTE
+@colorsp7: #485066; //COLOR VIOLETA-GRIS ++
+
+@gray0: #666666;
+@gray1: #888888;
+@gray2: #999999;
+
+//FONT SCALE
+//1em=16px, so
+@36px: 2.25em;
+@24px: 1.5em;
+@22px: 1.375em;
+@20px: 1.25em;
+@18px: 1.125em;
+@16px: 1em;
+@13px: 0.8125em;
+@12px: 0.75em;
+@11px: 0.6875em;
+@10px: 0.625em;
+
+//FONT WEIGHT
+@light: 300;
+@normal: 400;
+@semi: 600;
+@bold: 700;
+
+//MEDIAS
+
+
+//MEDIA QUERIS
+@desktop: ~"only screen and (min-width: 768px)";
+@interval: ~"only screen and (min-width: 768px) and (max-width: 890px)";
+
+//SPECIAL MEDIA FOR TEAM
+@600: ~"only screen and (min-width: 600px)";
+@880: ~"only screen and (min-width: 880px)";
+
+
+//SHORTCUTS
+.open {
+    font-family: 'Open Sans', sans-serif;
+}
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.nodeco {
+    text-decoration: none;
+}
+.deco {
+    text-decoration: underline;
+}
+.fright {
+    float: right;
+}
+.fleft {
+    float: left;
+}
+.abso {
+    position: absolute;
+}
+.rela {
+    position: relative;
+}
+.fxd {
+    position: fixed;
+}
+.block {
+    display: block;
+}
+.inblock {
+    display: inline-block;
+}
+.none {
+    display: none;
+}
+.both {
+    clear: both;
+}
+.bxz {
+    box-sizing:         border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+}
+.bxshadow(@shadow) {
+    box-shadow:         0px 0px 25px 0px rgba(0, 0, 0, @shadow);
+    -moz-box-shadow:    0px 0px 25px 0px rgba(0, 0, 0, @shadow);
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, @shadow);
+}
+.radius(@radio){
+    border-radius:          @radio;
+    -moz-border-radius:     @radio;
+    -webkit-border-radius:  @radio;
+}
+.animation(@animation){
+    -webkit-animation: @animation;
+    -moz-animation: @animation;
+    -o-animation: @animation;
+    animation: @animation;
+}
+.transition(@transition){
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+.filter(@filter){
+    -webkit-filter: @filter;
+    -ms-filter: @filter;
+    filter: @filter;
+    -moz-filter: @filter;
+    -o-filter: @filter;
+}
+.transform(@transformation){
+    -webkit-transform: @transformation;
+    -moz-transform: @transformation;
+    -ms-transform: @transformation;
+    -o-transform: @transformation;
+    transform: @transformation;
+}
+.trans-ori(@trans-ori){
+    -webkit-transform-origin: @trans-ori;
+    -moz-transform-origin: @trans-ori;
+    -ms-transform-origin: @trans-ori;
+    -o-transform-origin: @trans-ori;
+    transform-origin: @trans-ori;
+}

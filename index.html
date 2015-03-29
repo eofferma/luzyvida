@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--META-->
+    <meta charset="UTF-8">
+    <title>Luz y Vida - </title>
+    <meta name="description" content="">
+    <meta name="author" content="Jaime Sellao - 2015">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--FAVICON-->
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/global.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrap clearfix">
+            <h1>
+                <a href="#banner" title="Luz y Vida">
+                    <img src="img/logotipo.png" alt="Logo Luz y Vida">
+                </a>
+            </h1>
+            <a href="" title="menú" class="to_menu"></a>
+            <nav>
+                <li><a href="#terapias" title="">Terapias</a></li>
+                <li><a href="#terapeutas" title="">Terapeutas</a></li>
+                <li><a href="#horarios" title="">Horarios &amp; Tarifas</a></li>
+                <li><a href="#contacto" title="">Contacto</a></li>
+                <li><a href="" title="">Reserva de Hora</a></li>
+            </nav>
+        </div><!--WRAP-->
+    </header><!--HEADER-->
+    <section id="banner">
+        <div class="wrap">
+            <ul class="slider">
+                <li>
+                    <div class="image_big">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Masajes de relajación</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam quod quo ad voluptatibus, non?</p>
+                    </div><!--CONTENT-->
+                </li>
+                <li>
+                    <div class="image_big">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Masajes de relajación</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam quod quo ad voluptatibus, non?</p>
+                    </div><!--CONTENT-->
+                </li>
+                <li>
+                    <div class="image_big">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Masajes de relajación</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam quod quo ad voluptatibus, non?</p>
+                    </div><!--CONTENT-->
+                </li>
+            </ul>
+            <a href="" class="btn bigger" title="Reserva tu hora" >Reserva tu hora</a>
+        </div><!--WRAP-->
+    </section><!--BANNER-->
+    <section id="widgets">
+        <div class="wrap clearfix">
+            <article id="opiniones">
+                <h3>Opiniones</h3>
+                <ul class="comments">
+                    <li class="clearfix">
+                        <img src="img/img_person.jpg" alt="">
+                        <div class="txt">
+                            <p>"Gracias a María Angélica no solo mejoró mi calidad de vida, sino la de mi familia</p>
+                            <span>Eduardo Offermann</span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="img/img_person.jpg" alt="">
+                        <div class="txt">
+                            <p>"Gracias a María Angélica no solo mejoró mi calidad de vida, sino la de mi familia</p>
+                            <span>Victor Offermann</span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="img/img_person.jpg" alt="">
+                        <div class="txt">
+                            <p>"Gracias a María Angélica no solo mejoró mi calidad de vida, sino la de mi familia</p>
+                            <span>Juan Offermann</span>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="img/img_person.jpg" alt="">
+                        <div class="txt">
+                            <p>"Gracias a María Angélica no solo mejoró mi calidad de vida, sino la de mi familia</p>
+                            <span>Pedro Offermann</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ctrl_comments">
+                    <a href="" data-slide-index="0"></a>
+                    <a href="" data-slide-index="1"></a>
+                    <a href="" data-slide-index="2"></a>
+                    <a href="" data-slide-index="3"></a>
+                </div>
+            </article><!--ARTICLE-->
+            <article id="nosotros">
+                <h3>Luz y Vida</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident, autem! Unde, architecto. Dignissimos tenetur ratione repudiandae corrupti inventore, vel quam cumque molestias ab pariatur.</p>
+                <a href="#terapeutas" title="" class="btn scrolling">CONÓCENOS</a>
+            </article><!--ARTICLE-->
+            <article id="encuentranos">
+                <h3>Encuéntranos</h3>
+                <p><span>+56 9 7334 4459</span><br><span>+56 2 2315 9945</span></p>
+                <p>info@luzyvida.cl<br>Av. Padro de Valdivia 1783. Local 118 - A<br>Providencia, Santiago - Chile</p>
+                <a href="#contacto" title="" class="btn scrolling">CONTÁCTANOS</a>
+            </article><!--ARTICLE-->
+        </div><!--WRAP-->
+    </section><!--WIDGETS-->
+    <section id="terapias">
+        <div class="wrap">
+            <h2>Terapías</h2>
+            <div class="select_area" id="the_sel">
+                <span>Biomagnetismo</span>
+                <div class="arrow_select"></div>
+                <ul class="therapy_sel">
+                    <li><a href="#" title="Biomagnetismo" data-slide-index="0">Biomagnetismo</a></li>
+                    <li><a href="#" title="Hipnosis"data-slide-index="1">Hipnosis</a></li>
+                    <li><a href="#" title="Tratamiento Floral"  data-slide-index="2">Tratamiento Floral</a></li>
+                    <li><a href="#" title="Masajes de relajación"  data-slide-index="3">Masajes de relajación</a></li>
+                    <li><a href="#" title="Reiki" data-slide-index="4">Reiki</a></li>
+                    <li><a href="#" title="Consultora Sexual / Terapia de parejas"  data-slide-index="5">Consultora Sexual/Terapia de parejas</a></li>
+                </ul>
+                <input type="hidden">
+            </div>
+            <ul class="content_pic">
+                <li><img src="img/the.jpg" alt="terapia"></li>
+                <li><img src="img/the.jpg" alt="terapia"></li>
+                <li><img src="img/the.jpg" alt="terapia"></li>
+                <li><img src="img/the.jpg" alt="terapia"></li>
+                <li><img src="img/the.jpg" alt="terapia"></li>
+                <li><img src="img/the.jpg" alt="terapia"></li>
+            </ul>
+            <ul class="content_area">
+                <li>
+                    <div class="therapy">
+                        <div>
+                            <h3>Biomagnetismo</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+                <li>
+                    <div class="therapy">
+                        <div>
+                           <h3>Hipnosis</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+                <li>
+                    <div class="therapy">
+                        <div>
+                            <h3>Tratamiento Floral</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+                <li>
+                    <div class="therapy">
+                        <div>
+                            <h3>Masajes de Relajación</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+                <li>
+                    <div class="therapy">
+                        <div>
+                            <h3>Reiki</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+                <li>
+                    <div class="therapy">
+                        <div>
+                        <h3>Consultora Sexual / Terapia de parejas</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptates labore at dolorem deserunt quam id, quibusdam, praesentium cupiditate obcaecati.</p>
+                        </div>
+                        <div>
+                            <h4>Enfermedades que trata</h4>
+                            <ul>
+                                <li>Estrés</li>
+                                <li>Fatiga Crónica</li>
+                                <li>Astenia</li>
+                                <li>Tics Nerviosos</li>
+                            </ul>
+                            <h4>Especialistas</h4>
+                            <ul>
+                                <li>Eduardo Offermann</li>
+                                <li>Jaime Sellao</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li><!--LI-->
+            </ul>
+        </div><!--WRAP-->
+    </section><!--TERAPIAS-->
+    <section id="terapeutas">
+        <div class="wrap">
+            <h2>Nuestro equipo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque accusamus itaque sapiente ducimus similique alias rem incidunt voluptatem corporis quisquam.</p>
+            <div class="team">
+                <ul>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="descrip">
+                            <span class="name">Juan Perez</span>
+                            <span class="charge">Subdirector</span>
+                            <span class="specs">Especialidades:</span>
+                            <p>Terapia Sexual / Yoga / Biomagnetismo</p>
+                        </div>
+                    </li>
+                </ul><!--TEAM UL-->
+            </div><!--TEAM-->
+            <span class="team_prev jcarousel-prev">PREP</span>
+            <span class="team_next jcarousel-next">NEXT</span>
+            <a href="" class="btn" title="">RESERVA TU HORA</a>
+        </div>
+    </section><!--TERAPEUTAS-->
+    <section id="horarios">
+        <div class="wrap">
+            <h2>Tarifas<span> </span>&amp;<span> </span>Horarios</h2>
+            <article>
+                <h3>Tarifas</h3>
+                <p>No hay tarifa diferenciada por tratamiento. En cada sesión se trabajan con las tres técnicas terapeuticas en el caso de ser requerido.</p>
+                <p>Valor Consulta: $20.000 <br>
+                    Valor Consulta a Domicicilio: $25.000
+                </p>
+                <p>*Los valores incluyen frasco y esencias florales en caso de ser recetado.</p>
+                <p>Formas de Pago: Cheque, efectivo, transferencia bancaria.</p>
+            </article>
+            <article>
+                <h3>Horarios</h3>
+                <p>Lunes a Viernes:  9:00 am a 21:00pm. <br>
+                Sábado: 9:30am a 14:00pm
+                </p>
+                <p>Festivos, consultar particularmente en administración.</p>
+            </article>
+        </div>
+    </section><!--WRAP-->
+    <section id="contacto">
+        <div class="wrap">
+            <h2>Contacto</h2>
+            <article>
+                <h3>Escríbenos!</h3>
+                <form>
+                    <div class="line">
+                        <input type="text" id="name" placeholder="Nombre">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <input type="number" id="phone" placeholder="Teléfono">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <input type="email" id="mail" placeholder="Email">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <textarea id="message" placeholder="Mensaje"></textarea>
+                        <div class="error-message"></div>
+                    </div>
+                    <small>&#42; Todos los campos son obligatorios</small>
+                    <a href="" id="submit_form" title="Enviar consulta" class="btn bigger">Enviar Consulta</a>
+                </form>
+            </article>
+            <article>
+                <h3>Encuéntranos también en</h3>
+                <div class="map">
+                    <div id="map_canvas"></div>
+                </div><!--MAP-->
+                <div class="info">
+                    <ul>
+                        <li>
+                            Av. Padro de Valdivia 1783. Local 118 - A<br>
+                            Providencia, Santiago - Chile
+                        </li>
+                        <li>
+                            <a href="tel:+56973344459" title="">+56 9 7334 4459</a><br>
+                            <a href="tel:+56223159945" title="">+56 2 2315 9945</a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@luzyvida.cl" title="">info@luzyvida.cl</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div><!--WRAP-->
+    </section>
+    <section id="prefooter">
+        <div class="wrap">
+            <div class="logo_gray">
+                <img src="img/logotipo_gray.png" alt="Logotipo gris">
+            </div>
+            <p>Acerca de nosotros: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at velit placerat, euismod tortor ac, accumsan ipsum. Nunc sit amet magna vitae justo pretium varius quis ac purus. Praesent commodo vestibulum mattis.</p>
+        </div><!--WRAP-->
+    </section>
+    <footer>
+        <div class="wrap">
+            <p>Todos los derechos reservados Luz y vida.cl &copy; 2015</p>
+        </div><!--WRAP-->
+    </footer><!--footer-->
+</body>
+</html>
