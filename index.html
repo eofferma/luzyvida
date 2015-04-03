@@ -13,15 +13,18 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/modal.css">-->
+<!--    <link rel="stylesheet" href="css/classic.css">-->
+<!--    <link rel="stylesheet" href="css/classic.date.css">-->
     <!--JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/jquery.jcarousel.min.js"></script>
+<!--    <script src="js/jquery.remodal.js"></script>-->
     <script src="js/maps.js"></script>
-    <script src="js/global.js"></script>
 </head>
-<body>
+<body class="remodal-bg">
     <header>
         <div class="wrap clearfix">
             <h1>
@@ -35,7 +38,7 @@
                 <li><a href="#terapeutas" title="">Terapeutas</a></li>
                 <li><a href="#horarios" title="">Horarios &amp; Tarifas</a></li>
                 <li><a href="#contacto" title="">Contacto</a></li>
-                <li><a href="" title="">Reserva de Hora</a></li>
+                <li><a href="#" data-remodal-target="modal" title="">Reserva de Hora</a></li>
             </nav>
         </div><!--WRAP-->
     </header><!--HEADER-->
@@ -473,5 +476,100 @@
             <p>Todos los derechos reservados Luz y vida.cl &copy; 2015</p>
         </div><!--WRAP-->
     </footer><!--footer-->
+    <div class="remodal" data-remodal-id="modal">
+        <h1>Reserva de Hora</h1>
+        <section id="fields">
+            <div class="reserva">
+                <form>
+                    <div class="line">
+                        <input type="text" id="full_name" placeholder="Nombre Completo">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <input type="text" id="rut" placeholder="R.U.T.">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <input type="number" id="phone_res" placeholder="Teléfono">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="line">
+                        <input type="email" id="mail_res" placeholder="Email">
+                        <div class="error-message"></div>
+                    </div>
+                    <small>&#42; Todos los campos son obligatorios</small>
+                    <div class="for_btn">
+                        <a href="" id="send_data" title="Enviar consulta" class="btn bigger">Enviar Consulta</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="hours">
+            <div class="">
+                <div class="line">
+                    <input type="text" class="datepicker" data-value="2015/04/20">
+                    <div class="error-message"></div>
+                </div>
+            </div>
+            <div class="">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Disponibilidad</th>
+                            <th>Acción</th>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td>Reservada</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13:00</td>
+                            <td>Disponible</td>
+                            <td>Seleccionar</td>
+                        </tr>
+                        <tr>
+                            <td>14:00</td>
+                            <td>Disponible</td>
+                            <td>Seleccionar</td>
+                        </tr>
+                        <tr>
+                            <td>15:00</td>
+                            <td>Disponible</td>
+                            <td>Seleccionar</td>
+                        </tr>
+                        <tr>
+                            <td>16:00</td>
+                            <td>Reservada</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17:00</td>
+                            <td>Reservada</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="for_btn">
+                <a href="" id="send_hour" title="Enviar consulta" class="btn bigger">Enviar Consulta</a>
+            </div>
+        </section>
+        <section id="success">
+            <article class="text">
+                <h6>¡Tu hora ha sido reservada exítosamente!</h6>
+                <p>Con fecha 01/03/2015, a las 11:00am.<br>
+                    Se ha enviado automaticamente un recordatorio y confirmación a<br>
+                    tu correo eléctronico, estamos en contacto!
+                </p>
+            </article>
+        </section>
+        <a class="remodal-cancel" href=""></a>
+        <a class="remodal-confirm" href=""></a>
+    </div>
 </body>
+<!--<script src="js/picker.js"></script>-->
+<!--<script src="js/picker.date.js"></script>-->
+<script src="js/global.js"></script>
 </html>

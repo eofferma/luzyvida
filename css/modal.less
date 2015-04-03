@@ -1,0 +1,137 @@
+@import 'shortcuts.less';
+
+.remodal, [data-remodal-id] {
+    visibility: hidden;
+}
+.remodal-is-locked { //CLASS IN HTML
+    overflow: scroll;
+    .fxd;
+}
+.remodal-overlay {
+    .fxd;
+    .none;
+    top: -5000px;
+    right: -5000px;
+    bottom: -5000px;
+    left: -5000px;
+    z-index: 9999;
+}
+.remodal-wrapper {
+    width: 100%;
+    height: 100%;
+    .fxd;
+    .none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10000;
+
+    &:after {
+        height: 100%;
+        .inblock;
+        margin-left: -0.05em;
+        content: "";
+    }
+}
+
+.remodal-overlay, .remodal-wrapper {
+    -webkit-transform: translateZ(0px);
+}
+
+.remodal-bg {
+    .transition(filter 0.2s ease-out);
+    .block;
+}
+body.remodal-is-active {
+    
+    .remodal-bg {
+        .filter(blur(3px));
+    }
+    .remodal {
+        .transform(scale(1));
+        opacity: 1;
+    }
+    .remodal-overlay {
+        opacity: 1;
+    }
+}
+.remodal-overlay {
+    .transition(opacity 0.3s ease-out);
+    opacity: 0;
+    background: rgba(33, 36, 46, 0.85);
+}
+
+.remodal {
+    width: 100%;
+    min-height: 100%;
+    .rela;
+    .inblock;
+    .bxz;
+    .transition(all 0.2s ease-out);
+    .transform(scale(0.95));
+    font-size: @16px;
+    opacity: 0;
+    background: white;
+    
+    h1 {
+        height: 50px;
+        .block;
+        .both;
+        text-align: center;
+        background: #F7F7F7;
+        line-height: 50px;
+        margin: 0;
+        font-weight: @light;
+        font-size: @36px;
+        color: @colorsp2;
+        padding-top: 36px;
+        
+        @media @400 {
+            padding-top: 0;
+        }
+    }    
+    
+    @media @desktop {
+        max-width: 700px;
+    }
+}
+
+.remodal, .remodal-wrapper:after {
+    vertical-align: middle;
+}
+.remodal-close {
+    width: 30px;
+    height: 30px;
+    .abso;
+    top: 9px;
+    right: 50%;
+    margin-right: -15px;
+    .transition(opacity 0.2s ease-out);
+    color: #cccccc;
+    opacity: 0.6;
+    
+    @media @400 {
+        margin-right: 0;
+        right: 20px;
+    }
+    
+    &:after {
+        .block;
+        content: "";
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        .transition(all 0.2s ease-out);
+        background-image: url(../img/close.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px 30px;
+    }
+    &:hover, &:active, &:hover.remodal-close:after, &:hover.remodal-close:active {
+        opacity: 1;
+    }
+}

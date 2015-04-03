@@ -42,6 +42,7 @@ jQuery(document).ready(function ($) {
         prevText: '',
         nextText: ''
     });
+    
     //TERAPIAS
     $('#terapias .content_area').bxSlider({
         pagerCustom: '#the_sel',
@@ -88,7 +89,6 @@ jQuery(document).ready(function ($) {
         controls: false
     });
     
-    
     //WIDTH
     if ($(window).width < 769) {
         $('body').addClass('mobile');
@@ -96,6 +96,8 @@ jQuery(document).ready(function ($) {
         $('body').removeClass('mobile');
     }
     
+    //DATEPICKER
+    $('.datepicker').pickadate();
 });
 //FUNCIONAMIENTO SCROLL MENU
 var goToSection = function (idSection, event) {
