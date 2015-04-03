@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
             $(this).next('nav').show();
         }
     });
-    
+        
     //SELECT TERAPIAS  
     $('.select_area .arrow_select, .select_area span').click(function () {
         if ($('body').width() < 751) {
@@ -58,8 +58,8 @@ jQuery(document).ready(function ($) {
     $('#terapeutas .team').jcarousel({
         easing: 'linear',
         wrap: 'circular',
-        animation: 2000
-    })
+        animation: 1000
+    });
     $('#terapeutas .jcarousel-prev').jcarouselControl({
         target: '-=1'
     });

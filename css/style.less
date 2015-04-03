@@ -1026,6 +1026,58 @@ section {
             }
         }
     }
+    .wrap {
+        .rela;
+    }
+    .ctrl_team {
+        width: 360px;
+        height: 30px;
+        .abso;
+        top: 190px;
+        left: 50%;
+        margin-left: -180px;
+        transition: all 0.5s ease;
+        
+        //MEDIA QUERIS ESPECIALES PARA EL 'EQUIPO'
+        
+        @media @600 {
+            width: 600px;
+            margin-left: -300px;
+        }
+        @media @880 {
+            width: 880px;
+            margin-left: 440px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        span {
+            z-index: 98;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &.team_prev {
+                height: 30px;
+                width: 16px;
+                background-image: url('../img/arrow_prev.svg');
+                margin-left: 10px;
+                opacity: 0.75;
+                .block;
+                .fleft;
+            }
+            &.team_next {
+                height: 30px;
+                width: 16px;
+                background-image: url('../img/arrow_next.svg');
+                margin-right: 10px;
+                opacity: 0.75;
+                .block;
+                .fright;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }   
 }
 #horarios {
     .rela;

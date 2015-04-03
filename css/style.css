@@ -1092,6 +1092,58 @@ section {
   display: block;
   font-size: 0.75em;
 }
+#terapeutas .wrap {
+  position: relative;
+}
+#terapeutas .ctrl_team {
+  width: 360px;
+  height: 30px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  margin-left: -180px;
+  transition: all 0.5s ease;
+}
+@media only screen and (min-width: 600px) {
+  #terapeutas .ctrl_team {
+    width: 600px;
+    margin-left: -300px;
+  }
+}
+@media only screen and (min-width: 880px) {
+  #terapeutas .ctrl_team {
+    width: 880px;
+    margin-left: 440px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#terapeutas .ctrl_team span {
+  z-index: 98;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#terapeutas .ctrl_team span.team_prev {
+  height: 30px;
+  width: 16px;
+  background-image: url('../img/arrow_prev.svg');
+  margin-left: 10px;
+  opacity: 0.75;
+  display: block;
+  float: left;
+}
+#terapeutas .ctrl_team span.team_next {
+  height: 30px;
+  width: 16px;
+  background-image: url('../img/arrow_next.svg');
+  margin-right: 10px;
+  opacity: 0.75;
+  display: block;
+  float: right;
+}
+#terapeutas .ctrl_team span:hover {
+  opacity: 1;
+}
 #horarios {
   position: relative;
 }
