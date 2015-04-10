@@ -18,6 +18,13 @@
     p {
         margin-bottom: 10px;
     }
+    label {
+        .roboto;
+        color: @gray1;
+        font-weight: @light;
+        margin-bottom: 8px;
+        .block;
+    }
     small {
         font-style: oblique;
     }
@@ -41,7 +48,7 @@
     input[type='number']::-webkit-inner-spin-button {
         /* display: none; <- Crashes Chrome on hover */
         -webkit-appearance: none;
-        -moz-appearance: none;
+        -moz-appearance: none !important;
         appearance: none;
         margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
     }
@@ -130,6 +137,7 @@
             }
             &:last-child {
                 border: none;
+                
                 &:after {
                     content: none;
                 }
@@ -158,10 +166,26 @@
                     font-size: 13px;
                     line-height: 110px;
                     color: @gray1;
+                    .rela;
                     
                     &:hover {
                         background-color: white;
                         color: @colorsp2;
+                    }
+
+                    i {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 20px 20px 0 20px;
+                        border-color: @colorsp2 transparent transparent transparent;
+                        .abso;
+                        left: 0;
+                        right: 0;
+                        bottom: -20px;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
                     }
                 }
                 &.active {
@@ -169,6 +193,10 @@
                         background-color: @colorsp2;
                         color: white;
                         .rela;
+                        
+                        i {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -228,9 +256,21 @@
                     transition: all 0.5s ease-in-out;
                 }
             }
+            &.success {
+                border: 1px solid #62DD87;
+                background-color: white;
+                color: #62DD87;
+                
+                &:before {
+                    content: none;
+                }
+                &:hover {
+                    color: white;
+                    background-color:  #62DD87;
+                }
+            }
         }
     }
-
 
         //CLEARFIX
         .clearfix:before,
@@ -246,6 +286,7 @@
         .clearfix {
           *zoom: 1;
         }
+
 //STRUCTURAL STUFFS
 
 html, body {
@@ -983,10 +1024,11 @@ section {
                     width: 100%;
                     margin: 0 auto;
                     .block;
-                    background-color: red;
                     .bxz;
+                    .rela;
                     border: 1px solid white;
                     transition: all 0.5s ease;
+                    overflow: hidden;
                     
                     @media @600 {
                         width: 200px;
@@ -995,8 +1037,15 @@ section {
                         width: 220px;
                     }
                     img {
-                        width: 100%;
-                        height: 100%;
+                        min-width: 100%;
+                        margin: auto;
+                        .abso;
+                        top: -100%;
+                        left: -100%;
+                        right: -100%;
+                        bottom: -100%;
+                        
+                        .grayscale;
                     }
                 }
                 .descrip {
@@ -1046,7 +1095,7 @@ section {
         }
         @media @880 {
             width: 880px;
-            margin-left: 440px;
+            margin-left: -440px;
             opacity: 0;
             visibility: hidden;
         }
@@ -1306,3 +1355,7 @@ footer {
         color: white;
     }
 }
+
+@import url('modal.less');
+@import url('classic.less');
+@import url('classic.date.less');

@@ -45,3 +45,12 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  /* IE 6-9 */
+}

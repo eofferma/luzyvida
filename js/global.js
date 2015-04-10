@@ -1,9 +1,18 @@
 jQuery(document).ready(function ($) {
     "use strict";
     
-    //MENU
+//    INTENTO POR CERRAR MENU AL CLICKEAR EN OTRO LUGAR    
+//    $('html').on('click', function (e) {
+//        if (!$(e.target) == $('nav li a') || ($('.to_menu').hasClass('active')) || $('body').width() <= 768) {
+//            $('.to_menu').removeClass('active');
+//            $('.to_menu').next('nav').hide();
+//        }
+//    });
+    
+    //MENU PRINCIPAL - CLASE ACTIVE Y FUNCIÓN PARA MOBILE
     $('.to_menu').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -12,9 +21,16 @@ jQuery(document).ready(function ($) {
             $(this).addClass('active');
             $(this).next('nav').show();
         }
-    });
         
-    //SELECT TERAPIAS  
+        $(this).next('nav').children('a').on('click', function () {
+            e.stopPropagation();
+        });
+    });
+    
+    //TRIANGULO MENU
+    triangle();
+    
+    //SELECTOR TERAPIAS  
     $('.select_area .arrow_select, .select_area span').click(function () {
         if ($('body').width() < 751) {
             if ($(this).parent('.select_area').find('.therapy_sel').is(':visible')) {
@@ -34,7 +50,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    //BANNER
+    //SLIDER BANNER
     $('#banner .slider').bxSlider({
         mode: 'fade',
         pager: false,
@@ -43,7 +59,7 @@ jQuery(document).ready(function ($) {
         nextText: ''
     });
     
-    //TERAPIAS
+    //SLIDER TERAPIAS
     $('#terapias .content_area').bxSlider({
         pagerCustom: '#the_sel',
         controls: false,
@@ -55,7 +71,7 @@ jQuery(document).ready(function ($) {
         mode: 'fade'
     });
     
-    //TERAPEUTAS
+    //SLIDER TERAPEUTAS
     $('#terapeutas .team').jcarousel({
         easing: 'linear',
         wrap: 'circular',
@@ -68,19 +84,20 @@ jQuery(document).ready(function ($) {
     $('#terapeutas .jcarousel-next').jcarouselControl({
         target: '+=1'
     });
-    
     $('#spec_the a').on('click', function (e) {
         e.preventDefault();
     });
     
+    //FUNCIÓN SCROLL
     $(document).on('scroll', onScroll);
     
-    //SCROLL MENU
+    //ON CLICK SCROLL
     $('nav li a, .scrolling, h1 a').click(function (e) {
         var target = $(this).attr("href");
         goToSection(target, e);
         $(this).parent().parent().parent().removeClass('active');
     });
+    
     
     //WIDGET COMENTARIOS
     $('#opiniones .comments').bxSlider({
@@ -89,17 +106,20 @@ jQuery(document).ready(function ($) {
         controls: false
     });
     
-    //WIDTH
-    if ($(window).width < 769) {
-        $('body').addClass('mobile');
-    } else {
-        $('body').removeClass('mobile');
-    }
-    
     //DATEPICKER
-    $('.datepicker').pickadate();
+    $('.datepicker').pickadate({
+        format: 'dd/mm/yyyy',
+        clear: false,
+        today: false,
+        close: false,
+        firstDay: 'Monday',
+        min: 'Today',
+        disable: [7]
+    });
 });
-//FUNCIONAMIENTO SCROLL MENU
+
+
+//FUNCIONES PARA SCROLL MENU
 var goToSection = function (idSection, event) {
     "use strict";
     event.preventDefault();
@@ -121,3 +141,15 @@ var onScroll = function (event) {
         }
     });
 };
+
+//FUNCIÓN TRIANGULO
+function triangle(event) {
+    "use strict";
+    
+    $('nav li').each(function () {
+        var widtha = $(this).width(),
+            halfwa = (widtha / 2) + 'px';
+        
+        $(this).children('a').children('i').css('border-width', '20px ' + halfwa + ' 0 ' + halfwa);
+    });
+}

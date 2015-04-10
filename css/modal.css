@@ -45,6 +45,15 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  /* IE 6-9 */
+}
 .remodal,
 [data-remodal-id] {
   visibility: hidden;
@@ -161,6 +170,7 @@ body.remodal-is-active .remodal-overlay {
 @media only screen and (min-width: 768px) {
   .remodal {
     max-width: 700px;
+    min-height: inherit;
   }
 }
 .remodal,
@@ -207,4 +217,161 @@ body.remodal-is-active .remodal-overlay {
 .remodal-close:hover.remodal-close:after,
 .remodal-close:hover.remodal-close:active {
   opacity: 1;
+}
+.remodal section {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
+}
+.remodal section > p {
+  margin-bottom: 20px;
+  color: #999999;
+  display: block;
+  text-align: left;
+}
+.remodal #fields .reserva {
+  text-align: left;
+  position: relative;
+}
+.remodal #fields .reserva:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 237px;
+  width: 224px;
+  background-image: url(../img/hover_reserva.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.remodal #fields .line {
+  width: 100%;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .remodal #fields .line {
+    width: 50%;
+  }
+}
+.remodal #fields .line:last-child {
+  margin-bottom: 20px;
+}
+.remodal #fields input[type="text"],
+.remodal #fields input[type="number"],
+.remodal #fields input[type="email"] {
+  border-left: none;
+  border-bottom: 2px solid #ccc !important;
+  background-color: rgba(255, 255, 255, 0);
+}
+.remodal #fields input[type="text"]:focus,
+.remodal #fields input[type="number"]:focus,
+.remodal #fields input[type="email"]:focus {
+  border-bottom: 2px solid #943f88 !important;
+}
+.remodal #fields form .line:first-child {
+  background-image: url('../img/res_name.png');
+  background-repeat: no-repeat;
+  background-position: 6px 5px;
+}
+.remodal #fields form .line:nth-child(2) {
+  background-image: url('../img/res_rut.png');
+  background-repeat: no-repeat;
+  background-position: 6px 2px;
+}
+.remodal #fields form .line:nth-child(3) {
+  background-image: url('../img/res_phone.png');
+  background-repeat: no-repeat;
+  background-position: 9px 5px;
+}
+.remodal #fields form .line:nth-child(4) {
+  background-image: url('../img/res_mail.png');
+  background-repeat: no-repeat;
+  background-position: 6px 5px;
+}
+.remodal #fields form .line a {
+  color: white;
+}
+.remodal #hours {
+  text-align: left;
+}
+.remodal #hours .for_date {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.remodal #hours .for_date label {
+  font-size: 0.8125em;
+}
+.remodal #hours .for_date input[type="text"] {
+  width: 135px;
+  padding: 5px 30px 5px 10px;
+  border: 1px solid #943f88;
+  cursor: pointer;
+  background-image: url('../img/calendar.png');
+  background-repeat: no-repeat;
+  background-position: 110px center;
+  background-size: auto;
+}
+@media only screen and (min-width: 768px) {
+  .remodal #hours .for_date {
+    width: 30%;
+    display: inline-block;
+    margin: 0;
+  }
+}
+.remodal #hours .for_time {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+}
+.remodal #hours .for_time .table table {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+}
+.remodal #hours .for_time .table table th {
+  padding: 5px 0;
+  color: #999999;
+  font-size: 0.8125em;
+  font-weight: 400;
+}
+.remodal #hours .for_time .table table th:first-child {
+  width: 60px;
+}
+.remodal #hours .for_time .table table th:nth-child(2) {
+  width: 130px;
+}
+.remodal #hours .for_time .table table td {
+  padding: 5px 0;
+  color: #ccc;
+  font-size: 0.8125em;
+  font-weight: 300;
+}
+.remodal #hours .for_time .table table tr.available td {
+  color: #999999;
+}
+.remodal #hours .for_time .table table tr.available td:nth-child(2) {
+  color: #62DD87;
+}
+.remodal #hours .for_time .table table tr.available.active td {
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .remodal #hours .for_time {
+    width: 60%;
+    display: inline-block;
+  }
+}
+.remodal small {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  margin-top: 20px;
+  font-size: 0.6875em;
+  font-weight: 300;
+  text-align: left;
 }

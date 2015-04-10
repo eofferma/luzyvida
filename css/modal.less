@@ -1,4 +1,4 @@
-@import 'shortcuts.less';
+@import url('shortcuts.less');
 
 .remodal, [data-remodal-id] {
     visibility: hidden;
@@ -97,6 +97,7 @@ body.remodal-is-active {
     
     @media @desktop {
         max-width: 700px;
+        min-height: inherit;
     }
 }
 
@@ -133,5 +134,178 @@ body.remodal-is-active {
     }
     &:hover, &:active, &:hover.remodal-close:after, &:hover.remodal-close:active {
         opacity: 1;
+    }
+}
+.remodal {
+    section {
+        .bxz;
+        width: 100%;
+        padding: 30px;
+            >p{
+                margin-bottom: 20px;
+                color: @gray2;
+                .block;
+                text-align: left;
+            }
+    }
+    #fields {
+        .reserva {
+            text-align: left;
+            .rela;
+            
+            &:before {
+                content: "";
+                .abso;
+                right: 0;
+                top: 0;
+                height: 237px;
+                width: 224px;
+                background-image: url(../img/hover_reserva.png);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+        }
+        .line {
+            width: 100%;
+            margin-bottom: 5px;
+            
+            @media @desktop {
+                width: 50%;
+            }
+            
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+        input[type="text"],input[type="number"],input[type="email"]{
+            border-left: none;
+            border-bottom: 2px solid #ccc !important;
+            background-color: rgba(255,255,255,0);
+            
+            &:focus {
+                border-bottom: 2px solid @colorsp2 !important;
+            }
+        }
+        form .line {
+            
+            &:first-child {
+                background-image: url('../img/res_name.png');
+                background-repeat: no-repeat;
+                background-position: 6px 5px;
+            }
+            &:nth-child(2){
+                background-image: url('../img/res_rut.png');
+                background-repeat: no-repeat;
+                background-position: 6px 2px;
+            }
+            &:nth-child(3){
+                background-image: url('../img/res_phone.png');
+                background-repeat: no-repeat;
+                background-position: 9px 5px;
+            }
+            &:nth-child(4){
+                background-image: url('../img/res_mail.png');
+                background-repeat: no-repeat;
+                background-position: 6px 5px;
+            }
+            a {
+                color: white;
+            }
+        }
+    }
+    #hours {
+        text-align: left;
+        
+        .for_date{
+            width: 100%;
+            .block;
+            vertical-align: top;
+            text-align: left;
+            margin-bottom: 20px;
+            
+            label {
+                font-size: @13px;
+            }
+            
+            input[type="text"]{
+                width: 135px;
+                padding: 5px 30px 5px 10px;
+                border: 1px solid @colorsp2;
+                cursor: pointer;
+                
+                background-image: url('../img/calendar.png');
+                background-repeat: no-repeat;
+                background-position: 110px center;
+                background-size: auto;
+            }
+            
+            @media @desktop {
+                width: 30%;
+                .inblock;
+                margin: 0;
+            }
+        }
+        .for_time {
+            width: 100%;
+            .block;
+            vertical-align: top;
+            
+            .table table {
+                .roboto;
+                margin: 0 auto;
+                
+                th {
+                    padding: 5px 0;
+                    color: @gray2;
+                    font-size: @13px;
+                    font-weight: @normal;
+                    
+                    &:first-child {
+                        width: 60px;
+                    }
+                    &:nth-child(2){
+                        width: 130px;
+                    }
+                }
+                td {
+                    padding: 5px 0;
+                    color: #ccc;
+                    font-size: @13px;
+                    font-weight: @light;
+                }
+                tr {
+                    &.available {                        
+                        td {
+                            color: @gray2;
+                            
+                            &:nth-child(2){
+                                color: #62DD87;
+                            }
+                        }
+                        &.active {
+                            td {
+                                font-weight: @normal;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+            @media @desktop {
+                width: 60%;
+                .inblock;
+            }
+        }
+    }
+    small {
+        .roboto;
+        .block;
+        margin-top: 20px;
+        font-size: @11px;
+        font-weight: @light;
+        text-align: left;
     }
 }
